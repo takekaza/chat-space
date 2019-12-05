@@ -1,0 +1,40 @@
+.chat-main
+  .main-group
+    .main-group__left
+      %h2.main-group__left--name
+        test
+      %ul.main-group__left--list
+        Member: 
+        %li.main-group__left--list--name
+          masa
+    =link_to "#", class: "main-group__edit" do
+      Edit
+  .main-messages
+    .message
+
+      .message__list
+        %p.message__list__name
+          masa
+        %p.message__list__today
+          2019/11/20(Wed) 17:43:01
+      .message__text
+        おはよう！
+      .message__list
+        %p.message__list__name
+          masa
+        %p.message__list__today
+          2019/11/20(Wed) 17:43:34
+      .message__text
+        今日は夜から雨
+
+
+
+  .message-form
+    %form.chat-main{class: "new_message", 'accept-charset' => "UTF-8"}
+      .input-left
+        %input{placeholder: "type a message", class: "input-left__text", type: "text"}
+        %label{class: "input-left__image"}
+          = icon('fas', 'image')
+          %input{class: "input-left__image__file", type: "file"}
+      %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", 'data-disable-with' => "Send"}
+
