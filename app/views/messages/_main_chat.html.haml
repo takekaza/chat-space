@@ -11,7 +11,6 @@
       Edit
   .main-messages
     .message
-
       .message__list
         %p.message__list__name
           masa
@@ -26,11 +25,8 @@
           2019/11/20(Wed) 17:43:34
       .message__text
         今日は夜から雨
-
-
-
   .message-form
-    %form.chat-main{class: "new_message", 'accept-charset': "UTF-8"}
+    %form{class: "new_message"}
       .input-left
         %input{placeholder: "type a message", class: "input-left__text", type: "text"}
         %label{class: "input-left__image"}
