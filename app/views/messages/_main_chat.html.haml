@@ -7,7 +7,7 @@
         Member: 
         %li.main-group__left--list--name
           masa
-    =link_to "#", class: "main-group__edit" do
+    =link_to "/groups/1/edit", class: "main-group__edit" do
       Edit
   .main-messages
     .message
@@ -32,5 +32,5 @@
         %label{class: "input-left__image"}
           = icon('fas', 'image')
           %input{class: "input-left__image__file", type: "file"}
-      %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", 'data-disable-with' => "Send"}
+      %input{type: "submit", name: "commit", value: "Send", class: "submit-btn", "data-disable-with":"Send"}
 
