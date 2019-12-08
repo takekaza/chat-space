@@ -5,26 +5,16 @@
         = current_user.name
       %ul.bar-top__items__icon
         %li.bar-top__items__icon--edit
-          =link_to "#", class: "bar-top__items" do
+          =link_to new_group_path, class: "bar-top__items" do
             = icon('fas', 'edit', class: "bar-top__items--icon")
         %li.bar-top__items__icon--user
           =link_to edit_user_path(current_user), class: "bar-top__items" do
             = icon('fas', 'cog', class: "bar-top__items__icon")
   .groups
-    =link_to "#", class: "group" do
-      %p.group__group-name
-        グループ名
-      %p.group__write-message
-        新着メッセージ
-    =link_to "#", class: "group" do
-      %p.group__group-name
-        グループ名
-      %p.group__write-message
-        新着メッセージ
-    =link_to "#", class: "group" do
-      %p.group__group-name
-        グループ名
-      %p.group__write-message
-        新着メッセージ
-
+    - current_user.groups.each do |group|
+      =link_to group_messages_path(group), class: "group" do
+        %p.group__group-name
+          = group.name
+        %p.group__write-message
+          メッセージはまだありません。
 
