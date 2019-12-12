@@ -26,7 +26,7 @@ $(function(){
     $(`#${userId}`).append(html);
   }
   $("#user-search-field").on("keyup", function(){
-    let input = $("#user-search-field").val();    //フォームの値を取得して変数に代入する
+    let input = $("#user-search-field").val();
     $.ajax({
       url: '/users',
       type: 'GET',
