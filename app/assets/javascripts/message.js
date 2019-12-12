@@ -74,7 +74,7 @@ $(function(){
         return false
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     }
   };
